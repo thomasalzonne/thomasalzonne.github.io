@@ -11,3 +11,8 @@ body{
     user-select: none;
     overscroll-behavior-y: contain;
 }
+.content{
+    height: 500px;
+    margin-top: 300px;
+    
+}
