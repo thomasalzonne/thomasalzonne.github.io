@@ -1,0 +1,14 @@
+{
+    "name": "pwa de la mort",
+    "short_name": "My PWA",
+    "icons": [
+        {
+           "src": "favicon.png",
+           "type": "image/png",
+           "sizes": "52x52"
+        }
+     ],
+     "start_url": "/",
+     "display": "standalone",
+     "id": "aloooooo"
+}

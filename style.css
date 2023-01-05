@@ -1,0 +1,12 @@
+.headerNav{
+    width: 100%;
+    padding: 15px 0;
+    background-color: aqua;
+    justify-content: center;
+    display: flex;
+}
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
