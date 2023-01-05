@@ -15,13 +15,20 @@ self.addEventListener("install", (event) => {
     );
   });
 
-  self.addEventListener("fetch", (event) => {
-    if (event.request.mode === 'navigate') {
-        console.log('horsligne')
-        return event.respondWith(
-          fetch(event.request).catch(() => caches.match(OFFLINE_URL))
-        );
-      }
-      
+  self.addEventListener("fetch", (e) => {
+      e.respondWith(
+        (async () => {
+          const r = await caches.match(e.request);
+          console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+          if (r) {
+            return r;
+          }
+          const response = await fetch(e.request);
+          const cache = await caches.open(cacheName);
+          console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+          cache.put(e.request, response.clone());
+          return response;
+        })()
+      );
   })
   
