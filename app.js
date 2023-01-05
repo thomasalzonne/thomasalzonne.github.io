@@ -26,7 +26,6 @@ const registerServiceWorker = async () => {
   
     var condition = navigator.onLine ? "online" : "offline";
     console.log(status)
-    status.className = condition;
     status.innerHTML = condition.toUpperCase();
   }
   updateOnlineStatus();
