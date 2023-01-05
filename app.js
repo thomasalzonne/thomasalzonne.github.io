@@ -22,10 +22,10 @@ const registerServiceWorker = async () => {
   registerServiceWorker();
 
   function updateOnlineStatus() {
-    const status = document.getElementById("status");
+    const status = document.querySelector("#status");
   
     var condition = navigator.onLine ? "online" : "offline";
-  
+    console.log(status)
     status.className = condition;
     status.innerHTML = condition.toUpperCase();
   }
