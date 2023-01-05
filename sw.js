@@ -15,5 +15,12 @@ self.addEventListener("install", (event) => {
   });
 
   self.addEventListener("fetch", (event) => {
-    console.log('fetch')
+    if (event.request.mode === 'navigate') {
+        console.log('horsligne')
+        return event.respondWith(
+          fetch(event.request).catch(() => caches.match(OFFLINE_URL))
+        );
+      }
+      
   })
+  
