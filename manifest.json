@@ -3,9 +3,10 @@
     "short_name": "My PWA",
     "icons": [
         {
-           "src": "apps.svg",
-           "type": "image/svg",
-           "sizes": "800x800"
+           "src": "logo.png",
+           "type": "image/png",
+           "sizes": "800x800",
+           "purpose": "maskable"
         }
      ],
      "start_url": "/",
