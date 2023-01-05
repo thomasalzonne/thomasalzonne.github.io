@@ -1,6 +1,7 @@
 {
     "name": "pwa de la mort",
     "short_name": "My PWA",
+    "theme_color": "red",
     "icons": [
         {
            "src": "logo.png",
